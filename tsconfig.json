@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "NodeNext",
+    "skipLibCheck": true,
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "types": ["node"],
+    "paths": {
+      "./grade-stats": ["./grade-stats.js"],
+      "./date-stats": ["./date-stats.js"]
+    },
+    "rewriteRelativeImportExtensions": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "files": ["./src/app.ts", "./src/date-stats.ts", "./src/grade-stats.ts"]
+}

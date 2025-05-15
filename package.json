@@ -1,0 +1,31 @@
+{
+  "name": "canvas-capture-stats",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node ./dist/app.js"
+  },
+  "main": "dist/app.js",
+  "exports": {
+    "./grade-stats": "./dist/grade-stats.js",
+    "./grade-stats.js": "./dist/grade-stats.js",
+    "./dist/grade-stats": "./dist/grade-stats.js",
+    "./dist/grade-stats.js": "./dist/grade-stats.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.17",
+    "eslint": "9.25.1",
+    "prettier": "^3.5.3",
+    "typescript": "~5.8.3"
+  },
+  "dependencies": {
+    "@canvas-capture-v2/canvas-capture-common": "^0.1.9",
+    "@eslint/js": "9.25.1",
+    "@types/cors": "2.8.18",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

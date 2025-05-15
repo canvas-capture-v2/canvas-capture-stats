@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cc-stats-deployment
+  labels:
+    app: cc-stats
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cc-stats
+  template:
+    metadata:
+      labels:
+        app: cc-stats
+    spec:
+      containers:
+        - name: cc-stats
+          image: yorkwmsoe/cc-stats
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 4002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cc-stats-service
+spec:
+  ports:
+  - port: 4002
+    protocol: TCP
+    targetPort: 4002
+  selector:
+    app: cc-stats
+  type: LoadBalancer
